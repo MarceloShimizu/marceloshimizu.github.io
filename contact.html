@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact | Marcelo Shimizu</title>
+    <link rel="stylesheet" href="css/site.css" type="text/css" />
+		<script src="js/formValidate.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="/">Contact</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <aside>
+        <img src="images/logo.png" alt="Marcelo Shimizu's Logo" />
+        <h2>Marcelo Shimizu</h2>
+      </aside>
+
+      <article>
+
+        <h1>Contact</h1>
+
+        <form id="contactForm"  action="http://symlink.dk/code/php/submit/" method="POST">
+
+            <div class="input-group">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" />
+              <p class="messageError" id="name_error">* Required field</p>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email" placeholder="Enter your e-mail"/>
+              <p class="messageError" id="email_error">* Required field</p>
+              <p class="messageError" id="emailFormat_error">* Invalid email address</p>
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" placeholder="Enter your 10-digit phone"/>
+              <p class="messageError" id="phone_error">* Required field</p>
+              <p class="messageError" id="phoneFormat_error">* Invalid phone number</p>
+            </div>
+
+            <div class="input-group">
+              <div><label for="subject">Subject</label></div>
+              <div>
+                <select name="subject" id="subject">
+                  <option value="" selected>- Select one -</option>
+                  <option value="Feedback">Feedback</option>
+                  <option value="Compliments">Compliments</option>
+                  <option value="Criticism">Criticism</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="JobOpportunity ">Job Opportunity </option>
+                </select>
+              </div>
+              <div><p class="messageError" id="subject_error">* Required field</p></div>
+            </div>
+
+            <div class="input-group">
+              <div><label for="message">Message</label></div>
+              <div>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <p class="messageError" id="message_error">* Required field</p>
+            </div>
+
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+
+        </form>
+      </article>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <p class="copyright">© 2023 Marcelo Shimizu</p>
+
+    </footer>
+  </body>
+</html>
